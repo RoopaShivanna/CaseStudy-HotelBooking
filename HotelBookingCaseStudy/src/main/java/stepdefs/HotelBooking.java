@@ -213,10 +213,10 @@ public class HotelBooking extends TestBase {
 		 String debitcardAlert=alert.getText();
 		 Assert.assertEquals("Please fill the Debit card Number", debitcardAlert);
 		 alert.accept();
-		 hotelbookingpage.cardHolderName.sendKeys(excelreader.readData("CardHolderName"));
-		 alert.accept();
 		 hotelbookingpage.debitCardNumber.sendKeys(data.get(0).get(0));
 		 hotelbookingpage.cvv.sendKeys(data.get(1).get(0));
+		 
+		
 		       
 		 
 	
@@ -232,9 +232,7 @@ public class HotelBooking extends TestBase {
 		String expirationMonthAlert=alert.getText();
 	    Assert.assertEquals("Please fill expiration month", expirationMonthAlert);
 	    alert.accept();
-	    hotelbookingpage.cardHolderName.sendKeys(excelreader.readData("CardHolderName"));
-	    alert.accept();
-	    hotelbookingpage.expirationMonth.sendKeys(data.get(0).get(0));
+         hotelbookingpage.expirationMonth.sendKeys(data.get(0).get(0));
 	}
 
 	@When("^user clicks on confirm booking without entering expiration year$")
@@ -247,9 +245,9 @@ public class HotelBooking extends TestBase {
 		String expirationYearAlert=alert.getText();
 	    Assert.assertEquals("Please fill the expiration year", expirationYearAlert);
 	    alert.accept();
-	    hotelbookingpage.cardHolderName.sendKeys(excelreader.readData("CardHolderName"));
-	    alert.accept();
 	    hotelbookingpage.expirationYear.sendKeys(data.get(0).get(0));
+	   
+	    
 	}
 
 
